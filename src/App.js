@@ -9,6 +9,10 @@ import ProductsPage from './components/Product/ProductsPage';
 import { Provider } from 'react-redux';
 import { Roles } from './common/rolesstore';
 import AddProduct from './components/Product/AddProduct';
+import ProductDetailsPage from './components/Product/ProductDetailsPage';
+import CheckoutPage from './components/Order/CheckoutPage';
+import ModifyProduct from './components/Product/ModifyProductPage';
+
 function App() {
   return    <Provider store={Roles}>
   <Router>
@@ -21,8 +25,10 @@ function App() {
       <Route exact path='/products' element={< ProductsPage />}></Route>
       <Route exact path='/addproduct' element={< AddProduct />}></Route>
       <Route exact path='/userpage' element={< UserPage />}></Route>
+      <Route exact path='/productDetails' element={< ProductDetailsPage />}></Route>
+      <Route exact path='/checkout' element={< CheckoutPage />}></Route>
+      <Route exact path='/modifyProduct' element={< ModifyProduct />}></Route>
       <Route path="*" element={<Navigate to="/" />} />
-      {/* <Route path="/login" exact component={LoginPage} /> */}
       
       </Routes>
       
